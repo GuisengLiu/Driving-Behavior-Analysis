@@ -1,0 +1,42 @@
+Abstract:
+As the world is growing at a great pace, so are humans' dependencies on electronic gadgets and automobiles. Transportation has been one such field which has revolutionised and changed the life of millions. The major changes from walking in past to multi-featured vehicles in present sets our path to autonomous driving in future. As every major change comes with it's pros and cons, so to ensure driving remains a safe activity, assessing a driver's behavior in different circumstances and providing improvement measures becomes a necessity. Our project aims to achieve significant knowledge from various drives conducted in a variety of situations to analyse the driver's behavior. We are using a Peer and Temporal Aware Representation Learning based framework (PTARL) for driving behavior analysis using GPS trajectory data. We ﬁrst detect the driving operations and states of each driver from their GPS traces. Then, we derive a sequence of multi-view driving state transition graphs from the driving state sequences, in order to characterize a driver’s driving behaviors that vary over time. In addition, we develop a peer and temporal-aware representation learning method to learn a sequence of time-varying yet relational vectorized representations from the driving state transition graphs.
+
+
+
+
+Introduction:
+
+
+
+Related Works:
+
+Prior studies in driving behaviors analysis can be categorized into:
+(i) Causal Analysis: Researchers identify the causal factors of driving behaviors and explain how these factors inﬂuence road safety [20].
+(ii) Predictive Analysis: Researchers mine the patterns from driving data and apply machine learning models (e.g., SVM, naive Bayesian, etc.) to predict risky scores [36].
+(iii) Descriptive Analysis: Transportation experts deﬁne measurements (e.g., harsh or frequent acceleration/braking, sharp turn, acceleration before turn) based on transportation theory to describe driving behaviors [4].
+
+
+Challenges:
+
+(i) As the raw GPS data might not be suitable for classical or advanced mining algorithms, so it highly necessitates a novel method to transform GPS traces into an appropriate structure that can effectively characterize driving activities and corresponding spatio-temporal dynamics. 
+(ii) The proposal of a new framework becomes essential which should take two major things into account. Peer-Dependencies, i.e., the similarity between two trajectories should convey similar behaviors of respective drivers. Temporal-Dependencies, i.e., the behavioral patterns of a driver from his past to present.
+(iii) The optimising strategy should be such that it minimizes the overall loss incorporated in the whole process of converting GPS data to mining ready form and mining itself.
+
+
+
+Problem Statement:
+
+In our project, we explore the problem of automated driving behavior profiling with GPS traces. Formally, given a driver (a vehicle) and corresponding GPS trajectories, we aim to find a mapping function that takes the GPS trajectories as inputs, and outputs a sequence of time-varying yet relational vectorized representations in order to quantify the dynamics of the driver’s driving behavior. We formulate this problem as a task of spatio-temporal representation learning. Essentially, we first construct a sequence of driving state transition graphs from GPS trajectories, and then learn the latent representations of driving behavior from the graphs.
+
+Attributes Definition:
+1.Driving State: 
+	It is a tuple with two values, the first being speed status and second as direction status. Eg. <acceleration, turning-left>.
+2.State Transition Grpahs:
+	Driver's movement from one driving state to another is depicted as state transition graph which inherently is a directed graph.
+
+Model Framework:
+	To address the problem of consideration of both peer and temporal dependencies simultaneously, a framework called Peer and Temporal Aware Representation Learning Framework (PTARL) has been proposed and is being used in this project. Raw GPS trajectories are converted into state transition graphs and are used with aforementioned framework which can learn a sequence of time-varying yet relational vectorized representations. 
+
+	
+
+
